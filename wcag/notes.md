@@ -149,3 +149,47 @@
     - Missing closing tags, duplicate attributes, non-unique `id` attributes prevent effective parsing by AT
   - When creating custom components, `name`, `role`, and `value` can be determined, and AT can track changes to these properties
     - Use aria-\* attributes to indicate state and properties (e.g. a custom toggle component uses `role="button"` to indicate its intended use, `aria-pressed` attribute to indicate its state , and `aria-labelledby` to give it a clear name the user will understand)
+
+## Level AA Compliance
+
+### Principle 1 - Perceivable
+
+#### 1.1 Text alternatives
+
+- No additional requirements
+
+#### 1.2 Time-based media
+
+- Captions required
+  - "Captions are provided for all live audio content in synchronized media."
+  - For live audio content in synchronized media
+  - Synchronized media: media combined with another form of media, or with interaction (E.g. video + audio, audio + interaction, video + interaction)
+- Audio description required
+  - "Audio description is provided for all prerecorded video content in synchronized media."
+  - For pre-recorded video content (in synchronized media)
+  - Audio description track element not supported in most browsers (although is supported in IE11!)
+  - Only real way to satisfy this requirement is offering different version of the video with audio description added during pauses in audio, or a version with extended audio description (freezes video to describe, then resumes)
+
+#### 1.3 Adaptable
+
+- Must support all screen orientations
+  - "Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential."
+- Use HTML5 autocomplete attribute for forms about the user
+  - "The purpose of each input field collecting information about the user can be programmatically determined when:
+  - collecting information about the user who is filling out the form, and the info is listed in [Input Purposes](https://www.w3.org/TR/WCAG21/#input-purposes)
+  - identifying the purpose is supported in some way
+- Only way to do this currently is implementing the HTML5 `autocomplete` attribute
+
+#### 1.4 Distinguishable
+
+- Contrast ratio 4.5:1
+  - "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1" (with exceptions)
+  - Exceptions:
+    - Large scale text can have 3:1 ratio
+    - Incidental - if content is inactive or otherwise not relevant to user (superfluous, decorative)
+    - Logotypes - Logos, brand names exempt
+- Text can be resized up to 200%
+  - "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality."
+- Images of text are not used (text should be used)
+  - "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text"
+  - Logos are exempt
