@@ -211,6 +211,8 @@
 
 ### Principle 2 - Operable
 
+#### 2.4 Navigable
+
 - Provide multiple ways to find each page (except when part of a step flow)
 - Descriptive headings and labels
   - Put distinguishing content at the start of the heading (e.g. "Fire preparation", "Flood preparation" instead of "Preparation for fires", "Preparation for floods")
@@ -218,3 +220,21 @@
   - Can rely on default focus indicator
   - Can provide a highly visible custom focus indicator
   - Can change appearance of elements when they receive focus - does not have to be in a uniform way
+
+### Principle 3 - Understandable
+
+#### 3.1 Readable
+
+- Language of parts
+  - Documents can be comprised of text in multiple languages - Provide a language for all text
+    - In practice, should always set for the whole document, e.g. `<html lang="en"></html>` for English content. This language is inherited by all text elements in the document.
+    - When content differs from the default language, specify in the markup, e.g. `<p lang="fr">Bonjour!</p>`
+
+#### 3.2 Predictable
+
+- Consistent navigation
+  - Navs (or other repeated content) must be presented in the same _relative_ order across the site
+  - Items can be inserted between them, but their order remains the same
+- Consistent identification
+  - Use consistent language to label elements with the same purpose
+  - E.g. volume controls should be "Increase volume" and "Decrease volume" instead of "Make it louder" and "Lower the volume"
