@@ -193,3 +193,18 @@
 - Images of text are not used (text should be used)
   - "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text"
   - Logos are exempt
+- Reflow
+  - Reflows without loss of info or functionality
+  - Doesn't require scrolling in 2 directions (e.g. side-scrolling)
+  - Min viewport width 320px for vertical scrolling content
+  - Min viewport height 256px for horizontal scrolling content
+- Non-text contrast
+  - 3:1 contrast ratio with adjacent colors for UI components (or graphical objects)
+- Text spacing - content and functionality ok when setting:
+  - Line height (line spacing) to at least 1.5 times the font size;
+  - Spacing following paragraphs to at least 2 times the font size;
+  - Letter spacing (tracking) to at least 0.12 times the font size;
+  - Word spacing to at least 0.16 times the font size.
+- Content on hover or focus
+  - If content appears on hover or focus, must be a way to dismiss it without removing hover or focus
+  - Content is available until hover/focus is removed or user dismisses it
