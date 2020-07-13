@@ -208,3 +208,13 @@
 - Content on hover or focus
   - If content appears on hover or focus, must be a way to dismiss it without removing hover or focus
   - Content is available until hover/focus is removed or user dismisses it
+
+### Principle 2 - Operable
+
+- Provide multiple ways to find each page (except when part of a step flow)
+- Descriptive headings and labels
+  - Put distinguishing content at the start of the heading (e.g. "Fire preparation", "Flood preparation" instead of "Preparation for fires", "Preparation for floods")
+- Keyboard focus must be visible
+  - Can rely on default focus indicator
+  - Can provide a highly visible custom focus indicator
+  - Can change appearance of elements when they receive focus - does not have to be in a uniform way
