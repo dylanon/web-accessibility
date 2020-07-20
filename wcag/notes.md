@@ -238,3 +238,35 @@
 - Consistent identification
   - Use consistent language to label elements with the same purpose
   - E.g. volume controls should be "Increase volume" and "Decrease volume" instead of "Make it louder" and "Lower the volume"
+
+#### 3.3 Input Assistance
+
+- Error suggestion
+  - When mandatory form field is not filled out or filled with an invalid value, change the form field label to indicate
+  - When form submission occurs with the issue with mandatory form field, add links after the submit button so user can navigate to the form fields that need attention
+- Error prevention
+  - When input submission has legal implications or effects that are impossible or difficult to reverse, the interface should
+    - Communicate any delay or request revoking period implemented in the system
+    - Provide user with a way to review all data before submitting, and means edit the data if necessary
+  - One pattern that comes up regularly is using a checkbox in addition to a button - a double confirmation of an action
+
+### Principle 4 - Robust
+
+#### 4.1 Compatible
+
+- Status Messages
+  - Success statuses
+    - Use `role="status"` to notify user that content has been updated to reflect a change in the application's status
+    - Role must be available in the DOM before the content changes
+    - When content changes, announces to user in equivalent way to `aria-live="polite"`
+    - Announces all nested content, equivalent to when using `aria-atomic="true"`
+    - E.g. item added to shopping cart
+  - Error statuses
+    - Use `role="alert"` on an element - when content changes inside of this element, AT will announce them to the user
+    - Equivalent to `aria-live="assertive"`
+    - Useful for communicating form errors
+  - Progress statuses
+    - For statuses that represent changes over time
+    - Use `role="log"` on an element - when content changes, AT will announce as if `aria-live="polite"`
+    - Default is `aria-atomic="false"`
+    - E.g. Announce new chat messages
